@@ -13,7 +13,7 @@ Add to .arc file
 hicksy/shared-enhance-components-plugin
 
 @shared-enhance-components-plugin
-enhance-csrf 'elements'
+hicksy/enhance-csrf 'elements'
 enhance/form-elements
 ```
 

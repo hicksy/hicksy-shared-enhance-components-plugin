@@ -15,9 +15,12 @@ module.exports = {
         if(Array.isArray(shared_component)) {
 
           let pathToSharedElements = join(cwd(), 'node_modules', shared_component[0])
-
+          
+          let npm_package = shared_component[0]
+          
           if(!existsSync(pathToSharedElements)) {
             pathToSharedElements = join(cwd(), 'node_modules', `@${shared_component[0]}`)
+            npm_package = `@${shared_component[0]}`;
           }
 
           if (existsSync(pathToSharedElements)) {
@@ -25,7 +28,7 @@ module.exports = {
             
             readdirSync(join(pathToSharedElements, shared_component[1])).forEach(async file => {
               let mod = file.replace(elementsURL.pathname, '').replace(/.mjs$/, '').replace(/.js$/, '').replace(/\//g, '-')
-              let path = `${shared_component[0]}/${shared_component[1]}/${file}`
+              let path = `${npm_package}/${shared_component[1]}/${file}`
               els.push({
                 mod: mod,
                 tag: mod.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),

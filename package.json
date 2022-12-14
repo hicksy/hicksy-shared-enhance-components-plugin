@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hicksy/hicksy-shared-enhance-components-plugin.git"
+    "url": "https://github.com/hicksy/shared-enhance-components-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/hicksy/hicksy-shared-enhance-components-plugin/issues"
+    "url": "https://github.com/hicksy/shared-enhance-components-plugin/issues"
   },
-  "homepage": "https://github.com/hicksy/hicksy-shared-enhance-components-plugin",
+  "homepage": "https://github.com/hicksy/shared-enhance-components-plugin",
   "author": "Martin Hicks <hello@martinhicks.net>",
   "license": "Apache-2.0",
   "dependencies": {

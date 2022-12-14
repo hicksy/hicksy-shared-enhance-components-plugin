@@ -24,7 +24,7 @@ module.exports = {
             let elementsURL = pathToFileURL(join(pathToSharedElements, shared_component[1]));
             
             readdirSync(join(pathToSharedElements, shared_component[1])).forEach(async file => {
-              let mod = file.replace(elementsURL.pathname, '').replace(/.js$/, '').replace(/.mjs$/, '').replace(/\//g, '-')
+              let mod = file.replace(elementsURL.pathname, '').replace(/.mjs$/, '').replace(/.js$/, '').replace(/\//g, '-')
               let path = `${shared_component[0]}/${shared_component[1]}/${file}`
               els.push({
                 mod: mod,

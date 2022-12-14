@@ -3,7 +3,7 @@
 ### setup 
 
 ```
-npm install hicksy/shared-enhance-components-plugin
+npm install @hicksy/shared-enhance-components-plugin
 ```
 
 Add to .arc file

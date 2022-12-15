@@ -27,11 +27,11 @@ module.exports = {
             let elementsURL = pathToFileURL(join(pathToSharedElements, shared_component[1]));
             
             readdirSync(join(pathToSharedElements, shared_component[1])).forEach(async file => {
-              let mod = file.replace(elementsURL.pathname, '').replace(/.mjs$/, '').replace(/.js$/, '').replace(/\//g, '-')
+              const mod = await import(`${npm_package}/${shared_component[1]}/${file}`);
               let path = `${npm_package}/${shared_component[1]}/${file}`
               els.push({
-                mod: mod,
-                tag: mod.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
+                mod: mod.default.name,
+                tag: mod.default.name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
                 import: `import ${mod} from '${path}'`
               })
             });

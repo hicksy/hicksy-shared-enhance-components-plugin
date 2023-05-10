@@ -1,6 +1,6 @@
 {
   "name": "@hicksy/shared-enhance-components-plugin",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "A helper plugin to automate the discovery of shared npm installed enhance components within a different enhance project",
   "main": "index.js",
   "scripts": {

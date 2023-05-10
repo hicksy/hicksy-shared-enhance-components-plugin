@@ -32,7 +32,7 @@ module.exports = {
               els.push({
                 mod: mod.default.name,
                 tag: mod.default.name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
-                import: `import ${mod} from '${path}'`
+                import: `import ${mod.default.name} from '${path}'`
               })
             });
             

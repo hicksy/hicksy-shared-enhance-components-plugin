@@ -92,7 +92,7 @@ module.exports = {
         ${imports.map(imp => `${imp} //automatically inserted by shared-enhance-components-plugin`).join('\n')}
 
         let elements = {
-          ${Object.entries(existing_props.default).filter(el => els.filter(e => e.tag === el[0]).length === 0).map((el,idx) => `'${el[0]}': ${el[1].name}${idx < els.length - 1 ? ',' : ''}`)}
+          ${Object.entries(existing_props.default || {}).filter(el => els.filter(e => e.tag === el[0]).length === 0).map((el,idx) => `'${el[0]}': ${el[1].name}${idx < els.length - 1 ? ',' : ''}`)}
           ${els.map((el,idx) => `'${el.tag}': ${el.mod}${idx < els.length - 1 ? ',' : ''} //automatically inserted by shared-enhance-components-plugin`).join('\n')}
         }
   
